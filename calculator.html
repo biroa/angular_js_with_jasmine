@@ -1,0 +1,23 @@
+<html ng-app="calculatorApp">
+	<head>
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.min.js"></script>
+    
+    <!-- Angular and Angular Mock references -->
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular-mocks.js"></script>		
+	</head>
+	<body>
+		<!-- This div element corresponds to the  CalculatorController we created via the JavaScript-->
+		<div ng-controller="CalculatorController as CalculatorCtrl">
+			<input ng-model="CalculatorCtrl.x" type="number">
+			<input ng-model="CalculatorCtrl.y" type="number">
+			<strong>{{CalculatorCtrl.z}}</strong>
+			<!-- the value for ngClick maps to the sum function within the controller body -->
+			<input type="button" ng-click="CalculatorCtrl.sum()" value="+">
+		</div>
+		<script type="text/javascript" src="calculator.js"></script>
+	</body>	
+</html>
